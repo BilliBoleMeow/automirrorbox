@@ -159,6 +159,7 @@ class MirrorListener:
             update_all_messages()
             tg.upload()
         else:
+            clean_unwanted(path)
             size = get_path_size(up_path)
             LOGGER.info(f"Upload Name: {up_name}")
             drive = GoogleDriveHelper(up_name, self)
